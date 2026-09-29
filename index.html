@@ -4,25 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ให้ธงนำทาง | B-Quik Service Recovery</title>
+  <title>B-Quik | กิจกรรมให้ธงนำทาง</title>
 
   <!-- Google Font: Sarabun -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --yellow: #FFD400;
-      --yellow-dark: #E5B900;
+      --yellow: #FFD600;
+      --yellow-dark: #E5BE00;
       --black: #111111;
       --dark-gray: #2B2B2B;
       --gray: #666666;
       --light-gray: #F2F2F2;
-      --border: #D6D6D6;
+      --border: #D8D8D8;
       --white: #FFFFFF;
-      --orange: #F28C00;
-      --red: #D62828;
     }
 
     * {
@@ -31,10 +29,10 @@
 
     body {
       margin: 0;
-      background: #EDEDED;
-      color: var(--black);
       font-family: "Sarabun", sans-serif;
-      line-height: 1.65;
+      background: var(--light-gray);
+      color: var(--black);
+      line-height: 1.75;
     }
 
     button,
@@ -42,107 +40,97 @@
       font-family: "Sarabun", sans-serif;
     }
 
-    .page {
-      min-height: 100vh;
-    }
-
     /* =========================
        HEADER
     ========================= */
 
-    .header {
-      background: var(--yellow);
-      padding: 22px 18px 26px;
-      text-align: center;
-      border-bottom: 6px solid var(--black);
-    }
-
-    .brand {
-      display: inline-block;
+    header {
       background: var(--black);
+      color: var(--white);
+      padding: 18px 24px;
+      text-align: center;
+      border-bottom: 6px solid var(--yellow);
+    }
+
+    header .brand {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
       color: var(--yellow);
-      font-weight: 800;
-      font-size: 20px;
-      padding: 4px 16px;
-      border-radius: 30px;
-      margin-bottom: 12px;
     }
 
-    .header h1 {
-      margin: 0;
-      font-size: clamp(30px, 7vw, 52px);
-      font-weight: 800;
-      line-height: 1.15;
-    }
-
-    .header p {
-      margin: 8px 0 0;
-      font-size: 17px;
-      font-weight: 500;
+    header h1 {
+      margin: 4px 0 0;
+      font-size: 28px;
+      font-weight: 700;
     }
 
     /* =========================
-       CONTAINER
+       MAIN CONTAINER
     ========================= */
 
     .container {
-      width: min(900px, calc(100% - 28px));
-      margin: 24px auto 50px;
+      width: min(1000px, 92%);
+      margin: 0 auto;
+      padding: 35px 0 60px;
     }
 
     /* =========================
        LANDING PAGE
     ========================= */
 
-    .intro-card {
-      background: var(--white);
-      border: 2px solid var(--black);
-      border-radius: 18px;
-      padding: 24px;
-      margin-bottom: 22px;
+    .landing {
       text-align: center;
     }
 
-    .intro-icon {
-      font-size: 45px;
-      margin-bottom: 5px;
+    .landing h2 {
+      font-size: 25px;
+      margin-bottom: 8px;
     }
 
-    .intro-card h2 {
-      margin: 0 0 8px;
-      font-size: 28px;
-      font-weight: 800;
-    }
-
-    .intro-card p {
-      margin: 4px 0;
-      color: var(--dark-gray);
+    .landing .intro {
+      color: var(--gray);
+      max-width: 720px;
+      margin: 0 auto 30px;
       font-size: 17px;
     }
 
-    .instruction {
-      margin-top: 16px;
-      background: var(--light-gray);
-      border-radius: 12px;
-      padding: 14px;
-      font-weight: 600;
+    .instruction-box {
+      background: var(--white);
+      border-left: 7px solid var(--yellow);
+      padding: 20px 24px;
+      text-align: left;
+      margin: 0 auto 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
+
+    .instruction-box strong {
+      font-size: 18px;
+    }
+
+    /* =========================
+       CASE GRID
+    ========================= */
 
     .case-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
+      margin-top: 25px;
     }
 
     .case-button {
-      border: 3px solid var(--black);
       background: var(--white);
-      border-radius: 18px;
-      min-height: 150px;
+      border: 2px solid var(--black);
+      border-radius: 10px;
+      min-height: 120px;
       cursor: pointer;
-      transition: 0.15s ease;
-      padding: 18px;
-      text-align: center;
+      transition: 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .case-button:hover {
@@ -151,323 +139,280 @@
     }
 
     .case-number {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      background: var(--yellow);
-      border: 4px solid var(--black);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 10px;
       font-size: 32px;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .case-label {
-      font-size: 18px;
-      font-weight: 700;
+      font-size: 15px;
+      margin-top: 4px;
     }
 
     /* =========================
        CASE PAGE
     ========================= */
 
+    .case-page {
+      display: none;
+    }
+
+    .case-page.active {
+      display: block;
+    }
+
+    .back-button {
+      background: transparent;
+      border: none;
+      color: var(--gray);
+      cursor: pointer;
+      font-size: 15px;
+      padding: 0;
+      margin-bottom: 15px;
+    }
+
+    .back-button:hover {
+      color: var(--black);
+      text-decoration: underline;
+    }
+
     .case-header {
       background: var(--black);
       color: var(--white);
-      border-radius: 18px 18px 0 0;
-      padding: 20px 22px;
+      padding: 25px;
+      border-radius: 10px;
+      border-bottom: 7px solid var(--yellow);
+      margin-bottom: 25px;
     }
 
-    .case-header-top {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .case-big-number {
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      background: var(--yellow);
-      color: var(--black);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      font-weight: 800;
-      flex-shrink: 0;
+    .case-header .case-label {
+      color: var(--yellow);
+      font-weight: 600;
+      letter-spacing: 1px;
     }
 
     .case-header h2 {
-      margin: 0;
-      font-size: clamp(23px, 5vw, 34px);
-      line-height: 1.25;
+      margin: 4px 0 0;
+      font-size: 27px;
     }
 
-    .case-header .subtitle {
-      color: #DDDDDD;
-      margin-top: 3px;
-      font-size: 15px;
-    }
-
-    .layer-card {
-      background: var(--white);
-      border: 2px solid var(--black);
-      border-top: none;
-      padding: 24px;
-    }
+    /* =========================
+       LAYER
+    ========================= */
 
     .layer-title {
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .layer-number {
       background: var(--yellow);
-      border: 2px solid var(--black);
-      padding: 7px 15px;
-      border-radius: 30px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .layer-title h3 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .case-content {
+      background: var(--white);
+      padding: 28px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin-bottom: 25px;
+    }
+
+    .case-content h4 {
+      margin-top: 24px;
+      margin-bottom: 8px;
       font-size: 19px;
-      font-weight: 800;
-      margin-bottom: 20px;
+    }
+
+    .case-content h4:first-child {
+      margin-top: 0;
     }
 
     .time {
       font-weight: 700;
-      margin-bottom: 14px;
-      font-size: 17px;
-    }
-
-    .story {
-      font-size: 17px;
-      margin-bottom: 15px;
     }
 
     .dialogue {
-      background: #F6F6F6;
-      border-left: 5px solid var(--yellow);
-      border-radius: 8px;
+      background: #F7F7F7;
+      border-left: 4px solid var(--yellow);
       padding: 12px 16px;
-      margin: 10px 0;
+      margin: 12px 0;
+      border-radius: 5px;
     }
 
-    .dialogue strong {
+    .dialogue .speaker {
+      font-weight: 700;
       display: block;
-      font-weight: 800;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
 
-    .quote {
-      font-style: normal;
+    /* =========================
+       HINT
+    ========================= */
+
+    .hint-box {
+      background: #FFF9D6;
+      border: 1px solid var(--yellow-dark);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin: 25px 0;
     }
 
-    .info-box {
-      background: #F1F1F1;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin: 16px 0;
+    .hint-box .hint-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 8px;
     }
 
-    .info-box ul {
-      margin: 8px 0 0;
-      padding-left: 24px;
+    .hint-box ul {
+      margin-bottom: 0;
     }
 
-    .stop-box {
-      background: var(--black);
+    /* =========================
+       DISCUSSION BOX
+    ========================= */
+
+    .discussion-box {
+      background: var(--dark-gray);
       color: var(--white);
-      border-radius: 12px;
-      padding: 18px;
-      margin-top: 22px;
-      text-align: center;
+      border-radius: 10px;
+      padding: 24px;
+      margin: 25px 0;
     }
 
-    .stop-box .icon {
-      font-size: 28px;
-    }
-
-    .stop-box strong {
+    .discussion-box h3 {
       color: var(--yellow);
-      font-size: 20px;
+      margin-top: 0;
+    }
+
+    .discussion-box ul {
+      margin-bottom: 0;
     }
 
     /* =========================
        PASSWORD AREA
     ========================= */
 
-    .unlock-area {
-      margin-top: 20px;
-      padding: 20px;
-      background: #EAEAEA;
-      border-radius: 14px;
-      text-align: center;
-      border: 2px dashed #999;
-    }
-
-    .unlock-button {
-      border: 3px solid var(--black);
-      background: var(--yellow);
-      color: var(--black);
-      padding: 12px 24px;
+    .unlock-box {
+      background: var(--white);
+      border: 2px solid var(--black);
       border-radius: 10px;
-      font-size: 18px;
-      font-weight: 800;
-      cursor: pointer;
+      padding: 25px;
+      margin-top: 30px;
     }
 
-    .unlock-button:hover {
-      background: var(--yellow-dark);
+    .unlock-box h3 {
+      margin-top: 0;
     }
 
-    .password-box {
-      display: none;
+    .password-row {
+      display: flex;
+      gap: 10px;
       margin-top: 15px;
     }
 
-    .password-box input {
-      width: min(250px, 100%);
-      padding: 12px;
-      font-size: 20px;
-      text-align: center;
-      border: 2px solid var(--black);
-      border-radius: 8px;
-      letter-spacing: 5px;
+    .password-row input {
+      flex: 1;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 16px;
     }
 
-    .confirm-button {
-      margin-top: 10px;
-      background: var(--black);
-      color: var(--white);
-      border: none;
-      padding: 11px 22px;
-      border-radius: 8px;
-      font-size: 17px;
+    .password-row button {
+      background: var(--yellow);
+      color: var(--black);
+      border: 2px solid var(--black);
+      border-radius: 6px;
+      padding: 10px 20px;
       font-weight: 700;
       cursor: pointer;
     }
 
+    .password-row button:hover {
+      background: var(--yellow-dark);
+    }
+
     .error {
-      color: var(--red);
-      font-weight: 700;
-      margin-top: 8px;
+      color: #B00020;
+      margin-top: 10px;
       display: none;
+      font-weight: 600;
     }
 
     /* =========================
        LAYER 2
     ========================= */
 
-    .layer2 {
+    .layer-two {
       display: none;
-      margin-top: 24px;
+      margin-top: 35px;
     }
 
-    .layer2 .layer-card {
-      border: 3px solid var(--yellow-dark);
-      border-radius: 16px;
+    .layer-two.show {
+      display: block;
     }
 
-    .layer2-title {
-      display: inline-block;
-      background: var(--black);
-      color: var(--yellow);
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 19px;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    .discussion-box {
-      background: var(--yellow);
-      border: 3px solid var(--black);
-      border-radius: 14px;
-      padding: 18px;
-      margin-top: 22px;
-      text-align: center;
-    }
-
-    .discussion-box .emoji {
-      font-size: 30px;
-    }
-
-    .discussion-box strong {
-      font-size: 20px;
-    }
-
-    /* =========================
-       NAVIGATION
-    ========================= */
-
-    .bottom-nav {
-      display: flex;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .nav-button {
-      flex: 1;
-      border: 2px solid var(--black);
-      border-radius: 10px;
-      padding: 12px;
+    .new-information {
+      border-left: 7px solid var(--black);
       background: var(--white);
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .nav-button:hover {
-      background: var(--yellow);
-    }
-
-    .hidden {
-      display: none !important;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
 
     /* =========================
-       FOOTER
+       FINAL QUESTION
     ========================= */
 
-    footer {
+    .final-question {
+      margin-top: 25px;
+      background: var(--yellow);
+      border-radius: 10px;
+      padding: 22px;
       text-align: center;
-      padding: 25px;
-      color: var(--gray);
-      font-size: 14px;
+      font-size: 20px;
+      font-weight: 700;
     }
 
     /* =========================
        MOBILE
     ========================= */
 
-    @media (max-width: 650px) {
+    @media (max-width: 700px) {
+
+      header h1 {
+        font-size: 23px;
+      }
 
       .case-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .container {
-        width: min(100% - 18px, 900px);
-        margin-top: 12px;
+      .case-content {
+        padding: 20px;
       }
 
-      .layer-card {
-        padding: 18px;
+      .password-row {
+        flex-direction: column;
       }
 
-      .case-header {
-        padding: 16px;
-      }
-
-      .case-big-number {
-        width: 52px;
-        height: 52px;
-        font-size: 25px;
-      }
-
-      .story,
-      .dialogue {
-        font-size: 16px;
+      .password-row button {
+        width: 100%;
       }
     }
 
@@ -479,877 +424,1385 @@
       }
 
       .case-button {
-        min-height: 125px;
-        padding: 12px;
+        min-height: 100px;
       }
 
       .case-number {
-        width: 58px;
-        height: 58px;
-        font-size: 27px;
-      }
-
-      .case-label {
-        font-size: 16px;
+        font-size: 26px;
       }
     }
+
   </style>
 </head>
 
-
 <body>
 
-<div class="page">
+<header>
+  <div class="brand">B-QUIK | CUSTOMER SERVICE</div>
+  <h1>กิจกรรมให้ธงนำทาง</h1>
+</header>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+<div class="container">
 
-  <header class="header">
-    <div class="brand">B-QUIK SERVICE RECOVERY</div>
+  <!-- =====================================================
+       LANDING PAGE
+  ====================================================== -->
 
-    <h1>ให้ธงนำทาง</h1>
+  <section id="landing" class="landing">
 
-    <p>อ่านสถานการณ์ → คิด → พูดคุย → ประเมินอีกครั้ง</p>
-  </header>
+    <h2>เลือกหมายเลข CASE ของกลุ่ม</h2>
+
+    <p class="intro">
+      อ่านสถานการณ์ที่ได้รับ แล้วพูดคุยกันในกลุ่มว่า
+      <strong>“จากข้อมูลที่เห็นตอนนี้ เราควรให้ธงสีอะไร?”</strong>
+    </p>
+
+    <div class="instruction-box">
+
+      <strong>วิธีทำกิจกรรม</strong>
+
+      <ol>
+        <li>กดหมายเลข CASE ที่ได้รับมอบหมาย</li>
+        <li>อ่านข้อมูลชุดที่ 1 หรือ <strong>Layer 1</strong></li>
+        <li>พูดคุยกันในกลุ่มและประเมินว่าเคสนี้ควรเป็นสีอะไร</li>
+        <li>ยกธงตามความคิดเห็นของกลุ่ม พร้อมอธิบายเหตุผล</li>
+        <li>เมื่อได้รับอนุญาตจากผู้สอน จึงกดเข้าไปอ่านข้อมูลชุดที่ 2</li>
+        <li>พูดคุยกันอีกครั้งว่า เมื่อมีข้อมูลใหม่แล้ว เราจะยังเลือกสีเดิมหรือไม่</li>
+      </ol>
+
+    </div>
+
+    <div class="case-grid">
+
+      <button class="case-button" onclick="openCase(1)">
+        <div class="case-number">01</div>
+        <div class="case-label">CASE 01</div>
+      </button>
+
+      <button class="case-button" onclick="openCase(2)">
+        <div class="case-number">02</div>
+        <div class="case-label">CASE 02</div>
+      </button>
+
+      <button class="case-button" onclick="openCase(3)">
+        <div class="case-number">03</div>
+        <div class="case-label">CASE 03</div>
+      </button>
+
+      <button class="case-button" onclick="openCase(4)">
+        <div class="case-number">04</div>
+        <div class="case-label">CASE 04</div>
+      </button>
+
+      <button class="case-button" onclick="openCase(5)">
+        <div class="case-number">05</div>
+        <div class="case-label">CASE 05</div>
+      </button>
+
+      <button class="case-button" onclick="openCase(6)">
+        <div class="case-number">06</div>
+        <div class="case-label">CASE 06</div>
+      </button>
+
+      <button class="case-button" onclick="openCase(7)">
+        <div class="case-number">07</div>
+        <div class="case-label">CASE 07</div>
+      </button>
+
+      <button class="case-button" onclick="openCase(8)">
+        <div class="case-number">08</div>
+        <div class="case-label">CASE 08</div>
+      </button>
+
+    </div>
+
+  </section>
 
 
-  <main class="container">
+  <!-- =====================================================
+       CASE 01
+  ====================================================== -->
 
-    <!-- =========================
-         LANDING PAGE
-    ========================= -->
+  <section id="case1" class="case-page">
 
-    <section id="landingPage">
+    <button class="back-button" onclick="goHome()">← กลับไปเลือก CASE</button>
 
-      <div class="intro-card">
+    <div class="case-header">
+      <div class="case-label">CASE 01</div>
+      <h2>รถสั่นหลังรับรถ</h2>
+    </div>
 
-        <div class="intro-icon">🚩</div>
+    <div class="layer-title">
+      <div class="layer-number">1</div>
+      <h3>ข้อมูลชุดที่ 1 — Layer 1</h3>
+    </div>
 
-        <h2>เลือกหมายเลขเคสของคุณ</h2>
+    <div class="case-content">
+
+      <p class="time">เวลา 16.20 น.</p>
+
+      <p>
+        คุณ <strong>เมย์</strong> กำลังส่งมอบรถให้ <strong>คุณต้น</strong>
+        หลังจากรถเข้ารับบริการที่สาขา
+      </p>
+
+      <p>
+        คุณต้นสตาร์ตรถและขับออกจากช่องจอดเล็กน้อย
+        ก่อนหยุดรถแล้วเดินกลับมา
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">คุณต้น:</span>
+        “น้องครับ รถผมเหมือนจะสั่น ๆ ตอนจอดติดเครื่อง
+        เมื่อก่อนไม่เคยเป็นนะ”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">เมย์:</span>
+        “ตอนขับออกมาเมื่อกี้ สั่นตลอดไหมคะ?”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">คุณต้น:</span>
+        “ไม่ครับ รู้สึกชัดตอนจอด แต่ผมไม่มั่นใจว่าปกติหรือเปล่า”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">คุณต้น:</span>
+        “ผมกลัวว่ากลับไปแล้วรถมีปัญหาขึ้นมา
+        จะต้องเสียเวลาเอากลับมาอีก”
+      </div>
+
+      <p>
+        เมย์จึงแจ้งว่าจะให้ช่างตรวจสอบอาการก่อน
+        และขอให้คุณต้นรอผลตรวจ
+      </p>
+
+    </div>
+
+    <div class="hint-box">
+
+      <div class="hint-title">💡 ลองถามตัวเอง</div>
+
+      <ul>
+        <li>ตอนนี้เรารู้แน่ชัดหรือยังว่าเกิดความเสียหายอะไร?</li>
+        <li>ลูกค้าได้รับผลกระทบอย่างไรในตอนนี้?</li>
+        <li>เรื่องนี้ขยายไปถึงใครหรือยัง?</li>
+        <li>ถ้ายังไม่รีบจัดการ มีความเสี่ยงอะไรที่เรารู้แน่ชัดแล้วหรือยัง?</li>
+      </ul>
+
+    </div>
+
+    <div class="discussion-box">
+
+      <h3>🚩 ถึงเวลายกธง</h3>
+
+      <p>
+        ก่อนเปิดข้อมูลเพิ่มเติม ให้พูดคุยกันในกลุ่มว่า
+      </p>
+
+      <strong>
+        “ตอนนี้กลุ่มของเราคิดว่าเคสนี้เป็นสีอะไร และเพราะอะไร?”
+      </strong>
+
+    </div>
+
+    <div class="unlock-box">
+
+      <h3>🔐 ข้อมูลเพิ่มเติม — เปิดเมื่อได้รับอนุญาตเท่านั้น</h3>
+
+      <p>
+        เมื่อผู้สอนอนุญาต ให้กรอกรหัสผ่านเพื่อเปิดข้อมูลชุดที่ 2
+      </p>
+
+      <div class="password-row">
+        <input
+          type="password"
+          id="password1"
+          placeholder="โปรดระบุรหัสผ่าน"
+        >
+
+        <button onclick="unlockCase(1)">
+          เปิดข้อมูล
+        </button>
+      </div>
+
+      <div id="error1" class="error">
+        รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่
+      </div>
+
+    </div>
+
+    <div id="layer2-1" class="layer-two">
+
+      <div class="layer-title">
+        <div class="layer-number">2</div>
+        <h3>ข้อมูลชุดที่ 2 — Layer 2</h3>
+      </div>
+
+      <div class="new-information">
 
         <p>
-          อ่านข้อมูลชั้นที่ 1 แล้วพูดคุยกับกลุ่มของคุณ
+          หลังจากช่างตรวจสอบประมาณ 15 นาที
+          พบว่า <strong>อาการสั่นมีจริง
+          แต่ยังไม่พบปัญหาที่ทำให้รถอยู่ในภาวะอันตราย</strong>
         </p>
 
-        <div class="instruction">
-          ⚠️ ยังไม่ต้องเปิดข้อมูลชั้นที่ 2<br>
-          รอผู้สอนอนุญาตก่อน
+        <p>
+          ช่างแนะนำให้ตรวจเพิ่มเติมเรื่องยางรองแท่นเครื่อง
+          และนัดลูกค้านำรถกลับมาตรวจในวันถัดไป
+        </p>
+
+        <div class="dialogue">
+          <span class="speaker">เมย์:</span>
+          “ช่างตรวจแล้วค่ะ ตอนนี้ยังไม่พบปัญหาที่ทำให้รถไม่ปลอดภัย
+          แต่แนะนำให้ตรวจเพิ่มเติมพรุ่งนี้ค่ะ”
+        </div>
+
+        <div class="dialogue">
+          <span class="speaker">คุณต้น:</span>
+          “งั้นวันนี้ยังขับกลับได้ใช่ไหมครับ?”
+        </div>
+
+        <div class="dialogue">
+          <span class="speaker">เมย์:</span>
+          “ค่ะ ช่างยืนยันว่า ณ ตอนนี้ยังไม่พบเหตุที่ต้องหยุดใช้รถค่ะ
+          และเรานัดตรวจเพิ่มเติมให้พี่แล้วค่ะ”
+        </div>
+
+        <div class="dialogue">
+          <span class="speaker">คุณต้น:</span>
+          “โอเคครับ อย่างน้อยรู้ว่าเกิดอะไรขึ้น
+          พรุ่งนี้ผมเอากลับมาตามนัดครับ”
+        </div>
+
+        <p>
+          เมย์แจ้งผู้จัดการให้รับทราบว่ามีเคสนี้
+          และมีการนัดติดตามแล้ว
+        </p>
+
+      </div>
+
+      <div class="final-question">
+        “เมื่อมีข้อมูลใหม่แล้ว
+        คุณยังเลือกสีเดิมหรือไม่? เพราะอะไร?”
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CASE 02
+  ====================================================== -->
+
+  <section id="case2" class="case-page">
+
+    <button class="back-button" onclick="goHome()">← กลับไปเลือก CASE</button>
+
+    <div class="case-header">
+      <div class="case-label">CASE 02</div>
+      <h2>รถเสร็จแล้ว แต่ลูกค้ายังไม่ได้รถ</h2>
+    </div>
+
+    <div class="layer-title">
+      <div class="layer-number">1</div>
+      <h3>ข้อมูลชุดที่ 1 — Layer 1</h3>
+    </div>
+
+    <div class="case-content">
+
+      <p class="time">เวลา 17.10 น.</p>
+
+      <p>
+        คุณ <strong>อาร์ต</strong> พนักงานรับรถ
+        กำลังคุยกับ <strong>คุณฝน</strong>
+        ลูกค้าที่นำรถเข้ามาเปลี่ยนผ้าเบรกตั้งแต่ช่วงบ่าย
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">คุณฝน:</span>
+        “พี่มารับรถตามเวลาที่บอกไว้ค่ะ
+        แต่รถยังไม่เสร็จอีกเหรอคะ?”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">อาร์ต:</span>
+        “ขอเช็กให้ก่อนนะครับ
+        ตอนแรกช่างแจ้งว่าน่าจะเสร็จประมาณห้าโมงครับ”
+      </div>
+
+      <p>
+        อาร์ตเดินไปถามช่าง แล้วกลับมา
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">อาร์ต:</span>
+        “ตอนนี้ยังตรวจสอบขั้นสุดท้ายอยู่ครับ
+        น่าจะอีกสักพักครับ”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">คุณฝน:</span>
+        “พี่ต้องไปรับลูกตอนหกโมงนะคะ
+        ถ้าไม่ทันพี่ลำบากมาก”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">คุณฝน:</span>
+        “พี่ไม่ได้อยากเร่งช่างนะ
+        แต่ถ้าพี่ไม่รู้ว่าจะได้รถกี่โมง
+        พี่ก็วางแผนอะไรไม่ได้เลย”
+      </div>
+
+    </div>
+
+    <div class="hint-box">
+
+      <div class="hint-title">💡 ลองถามตัวเอง</div>
+
+      <ul>
+        <li>ตอนนี้ปัญหาเป็นเพียงเรื่องรถเสร็จช้าหรือมีผลกระทบอย่างอื่นแล้ว?</li>
+        <li>ลูกค้ากำลังเสียอะไรจากสถานการณ์นี้?</li>
+        <li>มีใครได้รับผลกระทบเพิ่มเติมจากลูกค้าหรือไม่?</li>
+        <li>ถ้าเวลาผ่านไปโดยไม่มีความชัดเจน เรื่องนี้อาจขยายไปอย่างไร?</li>
+      </ul>
+
+    </div>
+
+    <div class="discussion-box">
+
+      <h3>🚩 ถึงเวลายกธง</h3>
+
+      <p>
+        “ตอนนี้กลุ่มของเราคิดว่าเคสนี้เป็นสีอะไร และเพราะอะไร?”
+      </p>
+
+    </div>
+
+    <div class="unlock-box">
+
+      <h3>🔐 ข้อมูลเพิ่มเติม — เปิดเมื่อได้รับอนุญาตเท่านั้น</h3>
+
+      <div class="password-row">
+        <input
+          type="password"
+          id="password2"
+          placeholder="โปรดระบุรหัสผ่าน"
+        >
+
+        <button onclick="unlockCase(2)">
+          เปิดข้อมูล
+        </button>
+      </div>
+
+      <div id="error2" class="error">
+        รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่
+      </div>
+
+    </div>
+
+    <div id="layer2-2" class="layer-two">
+
+      <div class="layer-title">
+        <div class="layer-number">2</div>
+        <h3>ข้อมูลชุดที่ 2 — Layer 2</h3>
+      </div>
+
+      <div class="new-information">
+
+        <p>
+          อาร์ตไปตรวจสอบกับช่างอีกครั้ง
+          และพบว่า <strong>งานซ่อมยังไม่สามารถส่งมอบรถได้ตามเวลาที่คาดไว้</strong>
+        </p>
+
+        <p>
+          ขณะเดียวกัน คุณฝนได้รับโทรศัพท์จากสามี
+        </p>
+
+        <div class="dialogue">
+          <span class="speaker">สามี:</span>
+          “ฝน ตอนนี้ยังไม่ได้รถอีกเหรอ?
+          ผมออกจากงานไม่ได้ ลูกอยู่ที่โรงเรียนแล้วนะ”
+        </div>
+
+        <div class="dialogue">
+          <span class="speaker">คุณฝน:</span>
+          “ค่ะ…ตอนนี้ยังไม่ได้รถเลย”
+        </div>
+
+        <p>
+          หลังจากวางสาย เธอหันมาหาอาร์ต
+        </p>
+
+        <div class="dialogue">
+          <span class="speaker">คุณฝน:</span>
+          “ถ้าไม่ได้รถภายในเวลานี้ พี่ต้องไปเอาลูกเอง
+          แล้วพี่ไม่มีรถคันอื่นนะคะ”
+        </div>
+
+        <p>
+          อาร์ตเริ่มรู้ว่าเรื่องนี้ไม่ได้เป็นเพียงเรื่อง
+          “รถเสร็จช้า” แล้ว
+        </p>
+
+      </div>
+
+      <div class="final-question">
+        “เมื่อมีข้อมูลใหม่แล้ว
+        คุณยังเลือกสีเดิมหรือไม่? เพราะอะไร?”
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CASE 03
+  ====================================================== -->
+
+  <section id="case3" class="case-page">
+
+    <button class="back-button" onclick="goHome()">← กลับไปเลือก CASE</button>
+
+    <div class="case-header">
+      <div class="case-label">CASE 03</div>
+      <h2>ไฟเตือนขึ้นหลังรับรถ</h2>
+    </div>
+
+    <div class="layer-title">
+      <div class="layer-number">1</div>
+      <h3>ข้อมูลชุดที่ 1 — Layer 1</h3>
+    </div>
+
+    <div class="case-content">
+
+      <p class="time">เวลา 13.40 น.</p>
+
+      <p>
+        คุณ <strong>บีม</strong> พนักงานรับรถ
+        กำลังส่งมอบรถให้ <strong>คุณนัท</strong>
+        หลังจากนำรถเข้ามาตรวจเช็กและเปลี่ยนถ่ายของเหลวตามรายการ
+      </p>
+
+      <p>
+        คุณนัทสตาร์ตรถและกำลังจะขับออกจากสาขา
+        ทันใดนั้นเขาหยุดรถแล้วเดินกลับเข้ามา
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">คุณนัท:</span>
+        “น้องครับ ไฟสีแดงนี่มันขึ้นอะไรครับ?”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">บีม:</span>
+        “เดี๋ยวขอผมดูข้อมูลก่อนนะครับ”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">คุณนัท:</span>
+        “ตอนเอาเข้ามาเมื่อเช้าไม่มีนะครับ”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">บีม:</span>
+        “เดี๋ยวผมให้ช่างเช็กให้อีกทีครับ”
+      </div>
+
+      <p>
+        คุณนัทยังไม่ได้ขับรถออกจากสาขา
+      </p>
+
+    </div>
+
+    <div class="hint-box">
+
+      <div class="hint-title">💡 ลองถามตัวเอง</div>
+
+      <ul>
+        <li>เรารู้หรือยังว่าไฟเตือนหมายถึงอะไร?</li>
+        <li>ตอนนี้มีหลักฐานเรื่องความเสียหายหรือความเสี่ยงหรือยัง?</li>
+        <li>ลูกค้ายังอยู่ในพื้นที่หรือขับรถออกไปแล้ว?</li>
+        <li>ก่อนตัดสินใจ เราต้องรู้อะไรเพิ่ม?</li>
+      </ul>
+
+    </div>
+
+    <div class="discussion-box">
+
+      <h3>🚩 ถึงเวลายกธง</h3>
+
+      <p>
+        “ตอนนี้กลุ่มของเราคิดว่าเคสนี้เป็นสีอะไร และเพราะอะไร?”
+      </p>
+
+    </div>
+
+    <div class="unlock-box">
+
+      <h3>🔐 ข้อมูลเพิ่มเติม — เปิดเมื่อได้รับอนุญาตเท่านั้น</h3>
+
+      <div class="password-row">
+        <input
+          type="password"
+          id="password3"
+          placeholder="โปรดระบุรหัสผ่าน"
+        >
+
+        <button onclick="unlockCase(3)">
+          เปิดข้อมูล
+        </button>
+      </div>
+
+      <div id="error3" class="error">
+        รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่
+      </div>
+
+    </div>
+
+    <div id="layer2-3" class="layer-two">
+
+      <div class="layer-title">
+        <div class="layer-number">2</div>
+        <h3>ข้อมูลชุดที่ 2 — Layer 2</h3>
+      </div>
+
+      <div class="new-information">
+
+        <p>
+          หลังจากช่างตรวจสอบเพิ่มเติม พบว่าไฟที่ขึ้นเกี่ยวข้องกับ
+          <strong>ระบบเบรก</strong>
+        </p>
+
+        <p>
+          ช่างทดลองตรวจสอบเบื้องต้นแล้วพบว่า
+          <strong>ระบบเบรกมีค่าผิดปกติ
+          และไม่ควรปล่อยให้ลูกค้านำรถออกไปใช้งาน
+          ก่อนตรวจสอบให้ละเอียด</strong>
+        </p>
+
+        <div class="dialogue">
+          <span class="speaker">พี่ช่าง:</span>
+          “อย่าเพิ่งให้ลูกค้าขับออกไปนะ
+          เรื่องนี้ต้องให้ผู้จัดการเข้ามาดูแล้ว”
+        </div>
+
+        <div class="dialogue">
+          <span class="speaker">คุณนัท:</span>
+          “หมายความว่ารถผมขับไม่ได้เหรอครับ?”
+        </div>
+
+        <p>
+          บีมมองไปที่ผู้จัดการซึ่งกำลังเดินเข้ามา
+        </p>
+
+      </div>
+
+      <div class="final-question">
+        “เมื่อมีข้อมูลใหม่แล้ว
+        คุณยังเลือกสีเดิมหรือไม่? เพราะอะไร?”
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CASE 04
+  ====================================================== -->
+
+  <section id="case4" class="case-page">
+
+    <button class="back-button" onclick="goHome()">← กลับไปเลือก CASE</button>
+
+    <div class="case-header">
+      <div class="case-label">CASE 04</div>
+      <h2>รถไหลออกจากช่องซ่อม</h2>
+    </div>
+
+    <div class="layer-title">
+      <div class="layer-number">1</div>
+      <h3>ข้อมูลชุดที่ 1 — Layer 1</h3>
+    </div>
+
+    <div class="case-content">
+
+      <p class="time">เวลา 10.25 น.</p>
+
+      <p>
+        คุณ <strong>เจี๊ยบ</strong> กำลังเดินเอกสาร
+        อยู่บริเวณด้านหน้าช่องซ่อม
+      </p>
+
+      <p>
+        จู่ ๆ มีเสียงคนตะโกน
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">พี่ช่าง:</span>
+        “เฮ้ย! รถไหล!”
+      </div>
+
+      <p>
+        รถคันหนึ่งที่อยู่บริเวณช่องซ่อม
+        <strong>เคลื่อนตัวออกจากตำแหน่งโดยไม่มีคนอยู่ในรถ</strong>
+      </p>
+
+      <p>
+        พนักงานสองคนรีบถอยออกจากแนวรถ
+        คุณเจี๊ยบเห็นลูกค้าที่กำลังเดินผ่านบริเวณนั้นหยุดและตกใจ
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">ลูกค้า:</span>
+        “เมื่อกี้รถเกือบชนคนแล้วนะ!”
+      </div>
+
+      <p>
+        พี่ช่างรีบวิ่งไปหยุดรถและตรวจดูพื้นที่
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">เจี๊ยบ:</span>
+        “พี่ผู้จัดการอยู่ไหมคะ?”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">พนักงาน:</span>
+        “กำลังเรียกอยู่ครับ”
+      </div>
+
+    </div>
+
+    <div class="hint-box">
+
+      <div class="hint-title">💡 ลองถามตัวเอง</div>
+
+      <ul>
+        <li>ตอนนี้มีเหตุการณ์ที่เกี่ยวข้องกับความปลอดภัยเกิดขึ้นแล้วหรือไม่?</li>
+        <li>มีใครได้รับอันตรายหรือเกือบได้รับอันตรายหรือไม่?</li>
+        <li>เหตุการณ์นี้อาจส่งผลต่อทรัพย์สินหรือพื้นที่หรือไม่?</li>
+        <li>ถ้าเหตุการณ์ถูกปล่อยต่อไป จะมีความเสี่ยงอะไร?</li>
+      </ul>
+
+    </div>
+
+    <div class="discussion-box">
+
+      <h3>🚩 ถึงเวลายกธง</h3>
+
+      <p>
+        “ตอนนี้กลุ่มของเราคิดว่าเคสนี้เป็นสีอะไร และเพราะอะไร?”
+      </p>
+
+    </div>
+
+    <div class="unlock-box">
+
+      <h3>🔐 ข้อมูลเพิ่มเติม — เปิดเมื่อได้รับอนุญาตเท่านั้น</h3>
+
+      <div class="password-row">
+        <input
+          type="password"
+          id="password4"
+          placeholder="โปรดระบุรหัสผ่าน"
+        >
+
+        <button onclick="unlockCase(4)">
+          เปิดข้อมูล
+        </button>
+      </div>
+
+      <div id="error4" class="error">
+        รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่
+      </div>
+
+    </div>
+
+    <div id="layer2-4" class="layer-two">
+
+      <div class="layer-title">
+        <div class="layer-number">2</div>
+        <h3>ข้อมูลชุดที่ 2 — Layer 2</h3>
+      </div>
+
+      <div class="new-information">
+
+        <p>ตรวจสอบพื้นที่พบว่า</p>
+
+        <ul>
+          <li>รถมีความเสียหายเล็กน้อยบริเวณกันชน</li>
+          <li>ไม่มีผู้ได้รับบาดเจ็บ</li>
+          <li>มีลูกค้าอยู่ในพื้นที่ตอนเกิดเหตุหลายคน</li>
+          <li>หนึ่งในลูกค้าหยิบโทรศัพท์ขึ้นมาถ่ายวิดีโอเหตุการณ์ไว้</li>
+        </ul>
+
+        <div class="dialogue">
+          <span class="speaker">ผู้จัดการ:</span>
+          “ตอนนี้อย่าเพิ่งให้ใครขยับรถหรือเก็บพื้นที่
+          จนกว่าจะตรวจสอบข้อมูลให้ครบ”
         </div>
 
       </div>
 
+      <div class="final-question">
+        “เมื่อมีข้อมูลใหม่แล้ว
+        คุณยังเลือกสีเดิมหรือไม่? เพราะอะไร?”
+      </div>
 
-      <div class="case-grid">
+    </div>
 
-        <button class="case-button" onclick="openCase(1)">
-          <div class="case-number">1</div>
-          <div class="case-label">CASE 01</div>
+  </section>
+
+
+  <!-- =====================================================
+       CASE 05
+  ====================================================== -->
+
+  <section id="case5" class="case-page">
+
+    <button class="back-button" onclick="goHome()">← กลับไปเลือก CASE</button>
+
+    <div class="case-header">
+      <div class="case-label">CASE 05</div>
+      <h2>ลูกค้าไม่พอใจเรื่องค่าใช้จ่าย</h2>
+    </div>
+
+    <div class="layer-title">
+      <div class="layer-number">1</div>
+      <h3>ข้อมูลชุดที่ 1 — Layer 1</h3>
+    </div>
+
+    <div class="case-content">
+
+      <p class="time">เวลา 15.30 น.</p>
+
+      <p>
+        คุณ <strong>น้อง</strong> พนักงานหน้าร้าน
+        กำลังอธิบายค่าใช้จ่ายให้ <strong>คุณวุฒิ</strong>
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">คุณวุฒิ:</span>
+        “ตอนแรกบอกพี่อีกยอดหนึ่งไม่ใช่เหรอครับ?”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">น้อง:</span>
+        “รายการนี้มีงานเพิ่มเติมที่ช่างตรวจพบครับ
+        เดี๋ยวผมอธิบายรายละเอียดให้พี่ฟังได้ครับ”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">คุณวุฒิ:</span>
+        “ถ้าพี่รู้ว่าจะแพงขนาดนี้ พี่ไม่ทำหรอกครับ”
+      </div>
+
+      <p>
+        ลูกค้าอีกคนที่นั่งรออยู่หันมามอง
+      </p>
+
+      <p>
+        น้องจึงแจ้งผู้ช่วยผู้จัดการให้รับทราบ
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">ผู้ช่วยผู้จัดการ:</span>
+        “เดี๋ยวผมขอดูรายการกับพี่ก่อนนะครับ
+        เราจะเช็กว่ามีอะไรที่แจ้งไปแล้ว
+        และอะไรที่เป็นงานเพิ่มเติม”
+      </div>
+
+    </div>
+
+    <div class="hint-box">
+
+      <div class="hint-title">💡 ลองถามตัวเอง</div>
+
+      <ul>
+        <li>ตอนนี้มีความเสียหายอะไรเกิดขึ้นแล้วหรือยัง?</li>
+        <li>ลูกค้าได้รับผลกระทบมากน้อยแค่ไหน?</li>
+        <li>เรื่องนี้เริ่มขยายไปถึงคนอื่นหรือยัง?</li>
+        <li>มีความเสี่ยงอะไรที่อาจทำให้เรื่องรุนแรงขึ้น?</li>
+      </ul>
+
+    </div>
+
+    <div class="discussion-box">
+
+      <h3>🚩 ถึงเวลายกธง</h3>
+
+      <p>
+        “ตอนนี้กลุ่มของเราคิดว่าเคสนี้เป็นสีอะไร และเพราะอะไร?”
+      </p>
+
+    </div>
+
+    <div class="unlock-box">
+
+      <h3>🔐 ข้อมูลเพิ่มเติม — เปิดเมื่อได้รับอนุญาตเท่านั้น</h3>
+
+      <div class="password-row">
+        <input
+          type="password"
+          id="password5"
+          placeholder="โปรดระบุรหัสผ่าน"
+        >
+
+        <button onclick="unlockCase(5)">
+          เปิดข้อมูล
         </button>
+      </div>
 
-        <button class="case-button" onclick="openCase(2)">
-          <div class="case-number">2</div>
-          <div class="case-label">CASE 02</div>
-        </button>
+      <div id="error5" class="error">
+        รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่
+      </div>
 
-        <button class="case-button" onclick="openCase(3)">
-          <div class="case-number">3</div>
-          <div class="case-label">CASE 03</div>
-        </button>
+    </div>
 
-        <button class="case-button" onclick="openCase(4)">
-          <div class="case-number">4</div>
-          <div class="case-label">CASE 04</div>
-        </button>
+    <div id="layer2-5" class="layer-two">
 
-        <button class="case-button" onclick="openCase(5)">
-          <div class="case-number">5</div>
-          <div class="case-label">CASE 05</div>
-        </button>
+      <div class="layer-title">
+        <div class="layer-number">2</div>
+        <h3>ข้อมูลชุดที่ 2 — Layer 2</h3>
+      </div>
 
-        <button class="case-button" onclick="openCase(6)">
-          <div class="case-number">6</div>
-          <div class="case-label">CASE 06</div>
-        </button>
+      <div class="new-information">
+
+        <p>
+          ตรวจสอบใบรายการและข้อมูลการแจ้งลูกค้าแล้วพบว่า
+        </p>
+
+        <ul>
+          <li>มีงานเพิ่มเติมจริง</li>
+          <li>มีการแจ้งราคาเพิ่มเติมก่อนดำเนินการ</li>
+          <li>ลูกค้าได้รับข้อมูล แต่จำไม่ได้ว่าเคยตอบตกลง</li>
+          <li>ไม่มีความเสียหายต่อรถหรือทรัพย์สิน</li>
+          <li>ลูกค้ายังไม่ได้ขู่ว่าจะร้องเรียนหรือเผยแพร่เรื่อง</li>
+          <li>ลูกค้าเริ่มใจเย็นลงหลังผู้ช่วยผู้จัดการเข้ามาคุย</li>
+        </ul>
+
+        <div class="dialogue">
+          <span class="speaker">คุณวุฒิ:</span>
+          “โอเคครับ งั้นขอพี่ดูข้อมูลก่อนว่า
+          ตอนนั้นพี่ตกลงอะไรไว้”
+        </div>
+
+        <p>
+          ผู้ช่วยผู้จัดการเปิดข้อมูลให้ดู
+          และคุยกับลูกค้าต่ออย่างใจเย็น
+        </p>
 
       </div>
 
-    </section>
+      <div class="final-question">
+        “เมื่อมีข้อมูลใหม่แล้ว
+        คุณยังเลือกสีเดิมหรือไม่? เพราะอะไร?”
+      </div>
+
+    </div>
+
+  </section>
 
 
-    <!-- =========================
-         CASE PAGE
-    ========================= -->
+  <!-- =====================================================
+       CASE 06
+  ====================================================== -->
 
-    <section id="casePage" class="hidden">
+  <section id="case6" class="case-page">
 
-      <div class="case-header">
+    <button class="back-button" onclick="goHome()">← กลับไปเลือก CASE</button>
 
-        <div class="case-header-top">
+    <div class="case-header">
+      <div class="case-label">CASE 06</div>
+      <h2>ลูกค้าบอกว่าเบรกมีเสียง</h2>
+    </div>
 
-          <div class="case-big-number" id="caseNumber">
-            1
-          </div>
+    <div class="layer-title">
+      <div class="layer-number">1</div>
+      <h3>ข้อมูลชุดที่ 1 — Layer 1</h3>
+    </div>
 
-          <div>
-            <h2 id="caseTitle">CASE 01</h2>
-            <div class="subtitle">
-              อ่านข้อมูลชั้นที่ 1 ก่อน
-            </div>
-          </div>
+    <div class="case-content">
 
+      <p class="time">เวลา 18.05 น.</p>
+
+      <p>
+        คุณ <strong>พลอย</strong> พนักงานรับรถ
+        ได้รับโทรศัพท์จาก <strong>คุณก้อง</strong>
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">คุณก้อง:</span>
+        “รถที่เอาไปทำเมื่อวาน วันนี้เบรกมีเสียงครับ
+        ผมไม่แน่ใจว่าเป็นเพราะอะไร”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">พลอย:</span>
+        “พี่นำรถกลับเข้ามาให้เราตรวจได้ไหมคะ?”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">คุณก้อง:</span>
+        “วันนี้ไม่สะดวกครับ ผมยังต้องใช้รถ”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">พลอย:</span>
+        “ตอนนี้เบรกยังใช้งานได้ตามปกติไหมคะ?”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">คุณก้อง:</span>
+        “ก็ยังเบรกได้ครับ แค่มีเสียงดัง”
+      </div>
+
+      <p>
+        พลอยแจ้งว่าจะประสานช่างและให้ผู้จัดการรับทราบ
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">คุณก้อง:</span>
+        “พี่เพิ่งเอารถไปทำมาเองนะครับ
+        แล้วกลับมาเป็นแบบนี้อีก
+        พี่ไม่อยากต้องเสียเวลาเข้าออกหลายรอบ”
+      </div>
+
+    </div>
+
+    <div class="hint-box">
+
+      <div class="hint-title">💡 ลองถามตัวเอง</div>
+
+      <ul>
+        <li>ตอนนี้เรารู้เพียงว่า “มีเสียง” หรือรู้อะไรมากกว่านั้นแล้ว?</li>
+        <li>ข้อมูลที่มีอยู่เพียงพอจะประเมินความเสี่ยงหรือยัง?</li>
+        <li>ลูกค้ายังสามารถใช้รถได้หรือไม่ และเรารู้ได้อย่างไร?</li>
+        <li>มีคำถามอะไรที่ควรถามเพิ่มก่อนตัดสินใจ?</li>
+      </ul>
+
+    </div>
+
+    <div class="discussion-box">
+
+      <h3>🚩 ถึงเวลายกธง</h3>
+
+      <p>
+        “ตอนนี้กลุ่มของเราคิดว่าเคสนี้เป็นสีอะไร และเพราะอะไร?”
+      </p>
+
+    </div>
+
+    <div class="unlock-box">
+
+      <h3>🔐 ข้อมูลเพิ่มเติม — เปิดเมื่อได้รับอนุญาตเท่านั้น</h3>
+
+      <div class="password-row">
+        <input
+          type="password"
+          id="password6"
+          placeholder="โปรดระบุรหัสผ่าน"
+        >
+
+        <button onclick="unlockCase(6)">
+          เปิดข้อมูล
+        </button>
+      </div>
+
+      <div id="error6" class="error">
+        รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่
+      </div>
+
+    </div>
+
+    <div id="layer2-6" class="layer-two">
+
+      <div class="layer-title">
+        <div class="layer-number">2</div>
+        <h3>ข้อมูลชุดที่ 2 — Layer 2</h3>
+      </div>
+
+      <div class="new-information">
+
+        <p>
+          หลังจากผู้จัดการให้พลอยสอบถามรายละเอียดเพิ่มเติม
+          คุณก้องส่งคลิปเสียงที่บันทึกไว้มาให้
+        </p>
+
+        <p>
+          ช่างฟังแล้วบอกว่าเสียงดังกล่าว
+          <strong>ไม่ใช่เสียงจากการเสียดสีทั่วไป</strong>
+        </p>
+
+        <p>
+          ผู้จัดการจึงขอข้อมูลเพิ่มว่าเกิดเสียงในสถานการณ์ใด
+        </p>
+
+        <div class="dialogue">
+          <span class="speaker">คุณก้อง:</span>
+          “เมื่อกี้ผมลองขับช้า ๆ แล้วลองเบรกครับ
+          ตอนแรกเบรกอยู่ แต่รู้สึกว่าต้องเหยียบลึกกว่าเดิม”
+        </div>
+
+        <div class="dialogue">
+          <span class="speaker">พลอย:</span>
+          “ตอนนี้พี่อยู่ที่ไหนคะ?”
+        </div>
+
+        <div class="dialogue">
+          <span class="speaker">คุณก้อง:</span>
+          “อยู่หน้าบ้านครับ กำลังจะออกไปส่งลูก”
+        </div>
+
+        <div class="dialogue">
+          <span class="speaker">ช่าง:</span>
+          “ถ้าเป็นแบบนี้ ผมไม่แนะนำให้ลูกค้าขับรถต่อครับ
+          ต้องหยุดใช้รถและตรวจระบบเบรกก่อน”
+        </div>
+
+        <p>
+          ผู้จัดการหันกลับมาหาพลอย
+        </p>
+
+        <div class="dialogue">
+          <span class="speaker">ผู้จัดการ:</span>
+          “หยุดการนัดแบบปกติก่อนครับ
+          เรื่องนี้ต้องจัดการทันที”
         </div>
 
       </div>
 
-
-      <!-- =========================
-           LAYER 1
-      ========================= -->
-
-      <div class="layer-card">
-
-        <div class="layer-title">
-          👁️ ข้อมูลชั้นที่ 1
-        </div>
-
-        <div id="layer1Content"></div>
-
-
-        <div class="stop-box">
-
-          <div class="icon">🚩</div>
-
-          <strong>หยุดตรงนี้</strong>
-
-          <div>
-            อ่าน → คิด → พูดคุยกับกลุ่ม → ประเมินเคส
-          </div>
-
-        </div>
-
-
-        <!-- PASSWORD -->
-
-        <div class="unlock-area">
-
-          <button class="unlock-button" onclick="showPasswordBox()">
-            🔒 กดเมื่อได้รับอนุญาตเท่านั้น
-          </button>
-
-
-          <div class="password-box" id="passwordBox">
-
-            <div>
-              ผู้สอนอนุญาตให้เปิดข้อมูลชั้นที่ 2 แล้ว
-            </div>
-
-            <input
-              type="password"
-              id="passwordInput"
-              maxlength="4"
-              placeholder="ระบุรหัสผ่าน"
-              inputmode="numeric"
-            >
-
-            <br>
-
-            <button class="confirm-button" onclick="unlockLayer2()">
-              เปิดข้อมูลชั้นที่ 2
-            </button>
-
-            <div class="error" id="passwordError">
-              รหัสไม่ถูกต้อง กรุณาลองใหม่
-            </div>
-
-          </div>
-
-        </div>
-
+      <div class="final-question">
+        “เมื่อมีข้อมูลใหม่แล้ว
+        คุณยังเลือกสีเดิมหรือไม่? เพราะอะไร?”
       </div>
 
+    </div>
 
-      <!-- =========================
-           LAYER 2
-      ========================= -->
-
-      <div class="layer2" id="layer2Section">
-
-        <div class="layer-card">
-
-          <div class="layer2-title">
-            🔓 ข้อมูลชั้นที่ 2
-          </div>
-
-          <div id="layer2Content"></div>
+  </section>
 
 
-          <div class="discussion-box">
+  <!-- =====================================================
+       CASE 07
+  ====================================================== -->
 
-            <div class="emoji">💬</div>
+  <section id="case7" class="case-page">
 
-            <strong>กลับไปคุยกับกลุ่มอีกครั้ง</strong>
+    <button class="back-button" onclick="goHome()">← กลับไปเลือก CASE</button>
 
-            <p>
-              เมื่อมีข้อมูลใหม่แล้ว
-              คุณยังเลือกสีเดิมหรือไม่?
-            </p>
+    <div class="case-header">
+      <div class="case-label">CASE 07</div>
+      <h2>ลูกค้าบอกว่าเครื่องปรับอากาศไม่เย็นหลังรับรถ</h2>
+    </div>
 
-            <p>
-              เตรียมเหตุผลเพื่อแชร์กับทั้งห้อง
-            </p>
+    <div class="layer-title">
+      <div class="layer-number">1</div>
+      <h3>ข้อมูลชุดที่ 1 — Layer 1</h3>
+    </div>
 
-          </div>
+    <div class="case-content">
 
-        </div>
+      <p class="time">เวลา 14.20 น.</p>
 
+      <p>
+        คุณ <strong>ฟ้า</strong> กำลังส่งมอบรถให้ <strong>คุณเอก</strong>
+      </p>
+
+      <p>
+        คุณเอกเปิดแอร์แล้วทำหน้าผิดหวัง
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">คุณเอก:</span>
+        “น้องครับ แอร์มันไม่ค่อยเย็นเลยนะครับ
+        ก่อนเอามาทำยังปกติดีอยู่”
       </div>
 
+      <div class="dialogue">
+        <span class="speaker">ฟ้า:</span>
+        “เดี๋ยวหนูขอให้ช่างช่วยตรวจสอบให้นะคะ”
+      </div>
 
-      <!-- =========================
-           NAVIGATION
-      ========================= -->
+      <div class="dialogue">
+        <span class="speaker">คุณเอก:</span>
+        “พี่ต้องใช้รถกลับบ้านวันนี้นะ
+        ถ้าต้องเอาไว้ที่นี่อีกพี่ลำบากเลย”
+      </div>
 
-      <div class="bottom-nav">
+      <p>
+        ฟ้าจึงแจ้งช่างให้ตรวจสอบ
+      </p>
 
-        <button class="nav-button" onclick="goHome()">
-          ← กลับไปเลือกเคส
+    </div>
+
+    <div class="hint-box">
+
+      <div class="hint-title">💡 ลองถามตัวเอง</div>
+
+      <ul>
+        <li>ตอนนี้เรารู้หรือยังว่าระบบมีความเสียหาย?</li>
+        <li>ลูกค้ากังวลเรื่องอะไร?</li>
+        <li>มีความเสี่ยงด้านความปลอดภัยหรือไม่?</li>
+        <li>อะไรคือข้อมูลที่เราต้อง Verify ก่อนตัดสินใจ?</li>
+      </ul>
+
+    </div>
+
+    <div class="discussion-box">
+
+      <h3>🚩 ถึงเวลายกธง</h3>
+
+      <p>
+        “ตอนนี้กลุ่มของเราคิดว่าเคสนี้เป็นสีอะไร และเพราะอะไร?”
+      </p>
+
+    </div>
+
+    <div class="unlock-box">
+
+      <h3>🔐 ข้อมูลเพิ่มเติม — เปิดเมื่อได้รับอนุญาตเท่านั้น</h3>
+
+      <div class="password-row">
+        <input
+          type="password"
+          id="password7"
+          placeholder="โปรดระบุรหัสผ่าน"
+        >
+
+        <button onclick="unlockCase(7)">
+          เปิดข้อมูล
         </button>
+      </div>
+
+      <div id="error7" class="error">
+        รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่
+      </div>
+
+    </div>
+
+    <div id="layer2-7" class="layer-two">
+
+      <div class="layer-title">
+        <div class="layer-number">2</div>
+        <h3>ข้อมูลชุดที่ 2 — Layer 2</h3>
+      </div>
+
+      <div class="new-information">
+
+        <p>
+          ช่างตรวจสอบแล้วพบว่า
+          <strong>ระบบปรับอากาศยังทำงานได้ตามปกติ</strong>
+          แต่ต้องใช้เวลาสักระยะกว่าจะเย็น
+          เนื่องจากรถจอดอยู่กลางแดดเป็นเวลานาน
+        </p>
+
+        <p>
+          ช่างแนะนำวิธีใช้งานและตรวจสอบให้เรียบร้อยแล้ว
+        </p>
+
+        <div class="dialogue">
+          <span class="speaker">คุณเอก:</span>
+          “โอเคครับ ตอนนี้เย็นแล้ว
+          ถ้าอย่างนั้นพี่กลับได้”
+        </div>
+
+        <div class="dialogue">
+          <span class="speaker">ฟ้า:</span>
+          “ถ้ากลับไปแล้วอาการเปลี่ยนแปลง
+          สามารถติดต่อสาขาได้เลยนะคะ”
+        </div>
+
+        <p>
+          คุณเอกพยักหน้าและรับรถกลับ
+        </p>
 
       </div>
 
-    </section>
+      <div class="final-question">
+        “เมื่อมีข้อมูลใหม่แล้ว
+        คุณยังเลือกสีเดิมหรือไม่? เพราะอะไร?”
+      </div>
 
-  </main>
+    </div>
+
+  </section>
 
 
-  <footer>
-    B-Quik Service Recovery
-  </footer>
+  <!-- =====================================================
+       CASE 08
+  ====================================================== -->
+
+  <section id="case8" class="case-page">
+
+    <button class="back-button" onclick="goHome()">← กลับไปเลือก CASE</button>
+
+    <div class="case-header">
+      <div class="case-label">CASE 08</div>
+      <h2>ลูกค้ากลับมาครั้งที่สอง เพราะปัญหาเดิมยังไม่หาย</h2>
+    </div>
+
+    <div class="layer-title">
+      <div class="layer-number">1</div>
+      <h3>ข้อมูลชุดที่ 1 — Layer 1</h3>
+    </div>
+
+    <div class="case-content">
+
+      <p class="time">เวลา 11.40 น.</p>
+
+      <p>
+        คุณ <strong>กอล์ฟ</strong> กำลังรับรถจาก <strong>คุณมด</strong>
+      </p>
+
+      <p>
+        คุณมดเดินเข้ามาด้วยสีหน้าไม่พอใจ
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">คุณมด:</span>
+        “พี่เอารถมาที่นี่เมื่ออาทิตย์ก่อน
+        เรื่องเสียงจากล้อ วันนี้เสียงกลับมาอีกแล้วค่ะ”
+      </div>
+
+      <p>
+        กอล์ฟเปิดข้อมูลการเข้ารับบริการครั้งก่อน
+      </p>
+
+      <div class="dialogue">
+        <span class="speaker">กอล์ฟ:</span>
+        “เดี๋ยวผมขอตรวจสอบข้อมูลครั้งก่อนให้ก่อนนะครับ”
+      </div>
+
+      <div class="dialogue">
+        <span class="speaker">คุณมด:</span>
+        “พี่ไม่มีเวลามาเข้าออกหลายรอบนะคะ
+        ครั้งก่อนก็เสียเวลาไปแล้ว”
+      </div>
+
+      <p>
+        กอล์ฟจึงแจ้งผู้จัดการให้รับทราบ
+      </p>
+
+    </div>
+
+    <div class="hint-box">
+
+      <div class="hint-title">💡 ลองถามตัวเอง</div>
+
+      <ul>
+        <li>ปัญหานี้เกิดขึ้นเป็นครั้งแรกหรือเกิดซ้ำ?</li>
+        <li>ลูกค้ากำลังเสียอะไรนอกจากเวลา?</li>
+        <li>ความเชื่อมั่นของลูกค้าต่อสาขาเปลี่ยนไปอย่างไร?</li>
+        <li>เราต้องรู้ข้อมูลอะไรเพิ่มเติมก่อนตัดสินใจว่าจะจัดการอย่างไร?</li>
+      </ul>
+
+    </div>
+
+    <div class="discussion-box">
+
+      <h3>🚩 ถึงเวลายกธง</h3>
+
+      <p>
+        “ตอนนี้กลุ่มของเราคิดว่าเคสนี้เป็นสีอะไร และเพราะอะไร?”
+      </p>
+
+    </div>
+
+    <div class="unlock-box">
+
+      <h3>🔐 ข้อมูลเพิ่มเติม — เปิดเมื่อได้รับอนุญาตเท่านั้น</h3>
+
+      <div class="password-row">
+        <input
+          type="password"
+          id="password8"
+          placeholder="โปรดระบุรหัสผ่าน"
+        >
+
+        <button onclick="unlockCase(8)">
+          เปิดข้อมูล
+        </button>
+      </div>
+
+      <div id="error8" class="error">
+        รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่
+      </div>
+
+    </div>
+
+    <div id="layer2-8" class="layer-two">
+
+      <div class="layer-title">
+        <div class="layer-number">2</div>
+        <h3>ข้อมูลชุดที่ 2 — Layer 2</h3>
+      </div>
+
+      <div class="new-information">
+
+        <p>
+          ผู้จัดการตรวจสอบข้อมูลแล้วพบว่า
+          <strong>ลูกค้าเคยเข้ารับบริการด้วยปัญหาเดียวกันมาแล้วหนึ่งครั้ง
+          และวันนี้กลับมาด้วยอาการเดิม</strong>
+        </p>
+
+        <p>
+          ช่างตรวจสอบเบื้องต้นแล้วพบว่า
+          <strong>ยังไม่พบสัญญาณที่บ่งชี้ถึงอันตรายในการใช้งานรถ</strong>
+        </p>
+
+        <p>
+          แต่จำเป็นต้องตรวจสอบเพิ่มเติม
+          เพื่อหาสาเหตุที่แท้จริง
+        </p>
+
+        <div class="dialogue">
+          <span class="speaker">ผู้จัดการ:</span>
+          “ผมรับเรื่องนี้เองครับ
+          เดี๋ยวผมจะให้ทีมตรวจสอบข้อมูลครั้งก่อน
+          และตรวจรถเพิ่มเติม แล้วจะกลับมาแจ้งพี่ว่าพบอะไรครับ”
+        </div>
+
+        <div class="dialogue">
+          <span class="speaker">คุณมด:</span>
+          “ได้ค่ะ แต่พี่อยากให้ครั้งนี้หาสาเหตุให้เจอจริง ๆ นะคะ”
+        </div>
+
+      </div>
+
+      <div class="final-question">
+        “เมื่อมีข้อมูลใหม่แล้ว
+        คุณยังเลือกสีเดิมหรือไม่? เพราะอะไร?”
+      </div>
+
+    </div>
+
+  </section>
 
 </div>
 
 
 <script>
 
-  /* =========================================================
-     CASE DATA
-  ========================================================= */
+  /* =====================================================
+     เปิด CASE
+  ====================================================== */
 
-  const cases = {
+  function openCase(number) {
 
-    1: {
+    document.getElementById("landing").style.display = "none";
 
-      title: "รถสั่นหลังรับรถ",
+    const pages = document.querySelectorAll(".case-page");
 
-      layer1: `
-        <div class="time">🕓 เวลา 16.20 น.</div>
+    pages.forEach(function(page) {
+      page.classList.remove("active");
+    });
 
-        <div class="story">
-          คุณเมย์กำลังส่งมอบรถให้คุณต้น หลังจากรถเข้ารับบริการที่สาขา
-          คุณต้นสตาร์ตรถและขับออกจากช่องจอดเล็กน้อย
-          ก่อนหยุดรถแล้วเดินกลับมา
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณต้น:</strong>
-          <span class="quote">
-            “น้องครับ รถผมเหมือนจะสั่น ๆ ตอนจอดติดเครื่อง
-            เมื่อก่อนไม่เคยเป็นนะ”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>เมย์:</strong>
-          <span class="quote">
-            “ตอนขับออกมาเมื่อกี้ สั่นตลอดไหมคะ?”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณต้น:</strong>
-          <span class="quote">
-            “ไม่ครับ รู้สึกชัดตอนจอด แต่ผมไม่มั่นใจว่าปกติหรือเปล่า”
-          </span>
-        </div>
-
-        <div class="story">
-          คุณต้นเริ่มกังวลว่าจะต้องเสียเวลาเอารถกลับมาอีก
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณต้น:</strong>
-          <span class="quote">
-            “ผมกลัวว่ากลับไปแล้วรถมีปัญหาขึ้นมา
-            จะต้องเสียเวลาเอากลับมาอีก”
-          </span>
-        </div>
-
-        <div class="story">
-          เมย์จึงแจ้งว่าจะให้ช่างตรวจสอบอาการก่อน
-          และขอให้คุณต้นรอผลตรวจ
-        </div>
-      `,
-
-      layer2: `
-        <div class="story">
-          หลังจากช่างตรวจสอบประมาณ 15 นาที พบว่า
-          <strong>อาการสั่นมีจริง แต่ยังไม่พบปัญหาที่ทำให้รถอยู่ในภาวะอันตราย</strong>
-        </div>
-
-        <div class="story">
-          ช่างแนะนำให้ตรวจเพิ่มเติมเรื่องยางรองแท่นเครื่อง
-          และนัดลูกค้านำรถกลับมาตรวจในวันถัดไป
-        </div>
-
-        <div class="dialogue">
-          <strong>เมย์:</strong>
-          <span class="quote">
-            “ช่างตรวจแล้วค่ะ ตอนนี้ยังไม่พบปัญหาที่ทำให้รถไม่ปลอดภัย
-            แต่แนะนำให้ตรวจเพิ่มเติมพรุ่งนี้ค่ะ”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณต้น:</strong>
-          <span class="quote">
-            “งั้นวันนี้ยังขับกลับได้ใช่ไหมครับ?”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>เมย์:</strong>
-          <span class="quote">
-            “ค่ะ ช่างยืนยันว่า ณ ตอนนี้ยังไม่พบเหตุที่ต้องหยุดใช้รถค่ะ
-            และเรานัดตรวจเพิ่มเติมให้พี่แล้วค่ะ”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณต้น:</strong>
-          <span class="quote">
-            “โอเคครับ อย่างน้อยรู้ว่าเกิดอะไรขึ้น
-            พรุ่งนี้ผมเอากลับมาตามนัดครับ”
-          </span>
-        </div>
-
-        <div class="story">
-          เมย์แจ้งผู้จัดการให้รับทราบว่ามีเคสนี้
-          และมีการนัดติดตามแล้ว
-        </div>
-      `
-    },
-
-
-    2: {
-
-      title: "รถเสร็จแล้ว แต่ลูกค้ายังไม่ได้รถ",
-
-      layer1: `
-        <div class="time">🕔 เวลา 17.10 น.</div>
-
-        <div class="story">
-          คุณอาร์ต พนักงานรับรถ กำลังคุยกับคุณฝน
-          ลูกค้าที่นำรถเข้ามาเปลี่ยนผ้าเบรกตั้งแต่ช่วงบ่าย
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณฝน:</strong>
-          <span class="quote">
-            “พี่มารับรถตามเวลาที่บอกไว้ค่ะ
-            แต่รถยังไม่เสร็จอีกเหรอคะ?”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>อาร์ต:</strong>
-          <span class="quote">
-            “ขอเช็กให้ก่อนนะครับ ตอนแรกช่างแจ้งว่า
-            น่าจะเสร็จประมาณห้าโมงครับ”
-          </span>
-        </div>
-
-        <div class="story">
-          อาร์ตเดินไปถามช่าง แล้วกลับมา
-        </div>
-
-        <div class="dialogue">
-          <strong>อาร์ต:</strong>
-          <span class="quote">
-            “ตอนนี้ยังตรวจสอบขั้นสุดท้ายอยู่ครับ
-            น่าจะอีกสักพักครับ”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณฝน:</strong>
-          <span class="quote">
-            “พี่ต้องไปรับลูกตอนหกโมงนะคะ
-            ถ้าไม่ทันพี่ลำบากมาก”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>อาร์ต:</strong>
-          <span class="quote">
-            “เดี๋ยวผมเร่งให้ครับ”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณฝน:</strong>
-          <span class="quote">
-            “พี่ไม่ได้อยากเร่งช่างนะ
-            แต่ถ้าพี่ไม่รู้ว่าจะได้รถกี่โมง
-            พี่ก็วางแผนอะไรไม่ได้เลย”
-          </span>
-        </div>
-      `,
-
-      layer2: `
-        <div class="story">
-          อาร์ตไปตรวจสอบกับช่างอีกครั้ง และพบว่า
-          <strong>งานซ่อมยังไม่สามารถส่งมอบรถได้ตามเวลาที่คาดไว้</strong>
-        </div>
-
-        <div class="story">
-          ขณะเดียวกัน คุณฝนได้รับโทรศัพท์จากสามี
-        </div>
-
-        <div class="dialogue">
-          <strong>สามี:</strong>
-          <span class="quote">
-            “ฝน ตอนนี้ยังไม่ได้รถอีกเหรอ?
-            ผมออกจากงานไม่ได้ ลูกอยู่ที่โรงเรียนแล้วนะ”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณฝน:</strong>
-          <span class="quote">
-            “ค่ะ…ตอนนี้ยังไม่ได้รถเลย”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณฝน:</strong>
-          <span class="quote">
-            “ถ้าไม่ได้รถภายในเวลานี้ พี่ต้องไปเอาลูกเอง
-            แล้วพี่ไม่มีรถคันอื่นนะคะ”
-          </span>
-        </div>
-
-        <div class="story">
-          อาร์ตเริ่มรู้ว่าเรื่องนี้ไม่ได้เป็นเพียงเรื่อง
-          “รถเสร็จช้า” แล้ว
-        </div>
-      `
-    },
-
-
-    3: {
-
-      title: "ไฟเตือนขึ้นหลังรับรถ",
-
-      layer1: `
-        <div class="time">🕐 เวลา 13.40 น.</div>
-
-        <div class="story">
-          คุณบีม พนักงานรับรถ ส่งมอบรถให้คุณนัท
-          หลังจากนำรถเข้ามาตรวจเช็กและเปลี่ยนถ่ายของเหลวตามรายการ
-        </div>
-
-        <div class="story">
-          คุณนัทสตาร์ตรถและกำลังจะขับออกจากสาขา
-          ทันใดนั้นเขาหยุดรถ แล้วเดินกลับเข้ามา
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณนัท:</strong>
-          <span class="quote">
-            “น้องครับ ไฟสีแดงนี่มันขึ้นอะไรครับ?”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>บีม:</strong>
-          <span class="quote">
-            “เดี๋ยวขอผมดูข้อมูลก่อนนะครับ”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณนัท:</strong>
-          <span class="quote">
-            “ตอนเอาเข้ามาเมื่อเช้าไม่มีนะครับ”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>บีม:</strong>
-          <span class="quote">
-            “เดี๋ยวผมให้ช่างเช็กให้อีกทีครับ”
-          </span>
-        </div>
-
-        <div class="story">
-          คุณนัทยังไม่ได้ขับรถออกจากสาขา
-        </div>
-      `,
-
-      layer2: `
-        <div class="story">
-          หลังจากช่างตรวจสอบเพิ่มเติม พบว่าไฟที่ขึ้นเกี่ยวข้องกับ
-          <strong>ระบบเบรก</strong>
-        </div>
-
-        <div class="story">
-          ช่างทดลองตรวจสอบเบื้องต้นแล้วพบว่า
-          <strong>
-            ระบบเบรกมีค่าผิดปกติ และไม่ควรปล่อยให้ลูกค้านำรถออกไปใช้งาน
-            ก่อนตรวจสอบให้ละเอียด
-          </strong>
-        </div>
-
-        <div class="dialogue">
-          <strong>พี่ช่าง:</strong>
-          <span class="quote">
-            “อย่าเพิ่งให้ลูกค้าขับออกไปนะ
-            เรื่องนี้ต้องให้ผู้จัดการเข้ามาดูแล้ว”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณนัท:</strong>
-          <span class="quote">
-            “หมายความว่ารถผมขับไม่ได้เหรอครับ?”
-          </span>
-        </div>
-
-        <div class="story">
-          บีมมองไปที่ผู้จัดการซึ่งกำลังเดินเข้ามา
-        </div>
-      `
-    },
-
-
-    4: {
-
-      title: "รถไหลออกจากช่องซ่อม",
-
-      layer1: `
-        <div class="time">🕙 เวลา 10.25 น.</div>
-
-        <div class="story">
-          คุณเจี๊ยบกำลังเดินเอกสารอยู่บริเวณด้านหน้าช่องซ่อม
-          จู่ ๆ มีเสียงคนตะโกน
-        </div>
-
-        <div class="dialogue">
-          <strong>พี่ช่าง:</strong>
-          <span class="quote">
-            “เฮ้ย! รถไหล!”
-          </span>
-        </div>
-
-        <div class="story">
-          รถคันหนึ่งที่อยู่บริเวณช่องซ่อม
-          <strong>เคลื่อนตัวออกจากตำแหน่งโดยไม่มีคนอยู่ในรถ</strong>
-        </div>
-
-        <div class="story">
-          พนักงานสองคนรีบถอยออกจากแนวรถ
-          คุณเจี๊ยบเห็นลูกค้าที่กำลังเดินผ่านบริเวณนั้นหยุดและตกใจ
-        </div>
-
-        <div class="dialogue">
-          <strong>ลูกค้า:</strong>
-          <span class="quote">
-            “เมื่อกี้รถเกือบชนคนแล้วนะ!”
-          </span>
-        </div>
-
-        <div class="story">
-          พี่ช่างรีบวิ่งไปหยุดรถและตรวจดูพื้นที่
-        </div>
-
-        <div class="dialogue">
-          <strong>เจี๊ยบ:</strong>
-          <span class="quote">
-            “พี่ผู้จัดการอยู่ไหมคะ?”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>พนักงาน:</strong>
-          <span class="quote">
-            “กำลังเรียกอยู่ครับ”
-          </span>
-        </div>
-      `,
-
-      layer2: `
-        <div class="story">
-          ตรวจสอบพื้นที่พบว่า
-        </div>
-
-        <div class="info-box">
-          <ul>
-            <li>🚗 รถมีความเสียหายเล็กน้อยบริเวณกันชน</li>
-            <li>🧑‍⚕️ ไม่มีผู้ได้รับบาดเจ็บ</li>
-            <li>👥 มีลูกค้าอยู่ในพื้นที่ตอนเกิดเหตุหลายคน</li>
-            <li>📱 หนึ่งในลูกค้าหยิบโทรศัพท์ขึ้นมาถ่ายวิดีโอเหตุการณ์ไว้</li>
-          </ul>
-        </div>
-
-        <div class="dialogue">
-          <strong>ผู้จัดการ:</strong>
-          <span class="quote">
-            “ตอนนี้อย่าเพิ่งให้ใครขยับรถหรือเก็บพื้นที่
-            จนกว่าจะตรวจสอบข้อมูลให้ครบ”
-          </span>
-        </div>
-      `
-    },
-
-
-    5: {
-
-      title: "ลูกค้าไม่พอใจเรื่องค่าใช้จ่าย",
-
-      layer1: `
-        <div class="time">🕞 เวลา 15.30 น.</div>
-
-        <div class="story">
-          คุณน้อง พนักงานหน้าร้าน กำลังอธิบายค่าใช้จ่ายให้คุณวุฒิ
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณวุฒิ:</strong>
-          <span class="quote">
-            “ตอนแรกบอกพี่อีกยอดหนึ่งไม่ใช่เหรอครับ?”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>น้อง:</strong>
-          <span class="quote">
-            “รายการนี้มีงานเพิ่มเติมที่ช่างตรวจพบครับ
-            เดี๋ยวผมอธิบายรายละเอียดให้พี่ฟังได้ครับ”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณวุฒิ:</strong>
-          <span class="quote">
-            “ถ้าพี่รู้ว่าจะแพงขนาดนี้ พี่ไม่ทำหรอกครับ”
-          </span>
-        </div>
-
-        <div class="story">
-          ลูกค้าอีกคนที่นั่งรออยู่หันมามอง
-          น้องจึงแจ้งผู้ช่วยผู้จัดการให้รับทราบ
-        </div>
-
-        <div class="dialogue">
-          <strong>ผู้ช่วยผู้จัดการ:</strong>
-          <span class="quote">
-            “เดี๋ยวผมขอดูรายการกับพี่ก่อนนะครับ
-            เราจะเช็กว่ามีอะไรที่แจ้งไปแล้ว
-            และอะไรที่เป็นงานเพิ่มเติม”
-          </span>
-        </div>
-      `,
-
-      layer2: `
-        <div class="story">
-          ตรวจสอบใบรายการและข้อมูลการแจ้งลูกค้าแล้วพบว่า
-        </div>
-
-        <div class="info-box">
-          <ul>
-            <li>มีงานเพิ่มเติมจริง</li>
-            <li>มีการแจ้งราคาเพิ่มเติมก่อนดำเนินการ</li>
-            <li>ลูกค้าได้รับข้อมูล แต่จำไม่ได้ว่าเคยตอบตกลง</li>
-            <li>ไม่มีความเสียหายต่อรถหรือทรัพย์สิน</li>
-            <li>ลูกค้ายังไม่ได้ขู่ว่าจะร้องเรียนหรือเผยแพร่เรื่อง</li>
-            <li>ลูกค้าเริ่มใจเย็นลงหลังผู้ช่วยผู้จัดการเข้ามาคุย</li>
-          </ul>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณวุฒิ:</strong>
-          <span class="quote">
-            “โอเคครับ งั้นขอพี่ดูข้อมูลก่อนว่าตอนนั้นพี่ตกลงอะไรไว้”
-          </span>
-        </div>
-
-        <div class="story">
-          ผู้ช่วยผู้จัดการเปิดข้อมูลให้ดู
-          และคุยกับลูกค้าต่ออย่างใจเย็น
-        </div>
-      `
-    },
-
-
-    6: {
-
-      title: "ลูกค้าบอกว่าเบรกมีเสียง",
-
-      layer1: `
-        <div class="time">🕕 เวลา 18.05 น.</div>
-
-        <div class="story">
-          คุณพลอย พนักงานรับรถ ได้รับโทรศัพท์จากคุณก้อง
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณก้อง:</strong>
-          <span class="quote">
-            “รถที่เอาไปทำเมื่อวาน วันนี้เบรกมีเสียงครับ
-            ผมไม่แน่ใจว่าเป็นเพราะอะไร”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>พลอย:</strong>
-          <span class="quote">
-            “พี่นำรถกลับเข้ามาให้เราตรวจได้ไหมคะ?”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณก้อง:</strong>
-          <span class="quote">
-            “วันนี้ไม่สะดวกครับ ผมยังต้องใช้รถ”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>พลอย:</strong>
-          <span class="quote">
-            “ตอนนี้เบรกยังใช้งานได้ตามปกติไหมคะ?”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณก้อง:</strong>
-          <span class="quote">
-            “ก็ยังเบรกได้ครับ แค่มีเสียงดัง”
-          </span>
-        </div>
-
-        <div class="story">
-          พลอยแจ้งว่าจะประสานช่างและให้ผู้จัดการรับทราบ
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณก้อง:</strong>
-          <span class="quote">
-            “พี่เพิ่งเอารถไปทำมาเองนะครับ
-            แล้วกลับมาเป็นแบบนี้อีก
-            พี่ไม่อยากต้องเสียเวลาเข้าออกหลายรอบ”
-          </span>
-        </div>
-      `,
-
-      layer2: `
-        <div class="story">
-          หลังจากผู้จัดการให้พลอยสอบถามรายละเอียดเพิ่มเติม
-          คุณก้องส่งคลิปเสียงที่บันทึกไว้มาให้
-        </div>
-
-        <div class="story">
-          ช่างฟังแล้วบอกว่าเสียงดังกล่าว
-          <strong>ไม่ใช่เสียงจากการเสียดสีทั่วไป</strong>
-        </div>
-
-        <div class="story">
-          ผู้จัดการจึงขอข้อมูลเพิ่มว่าเกิดเสียงในสถานการณ์ใด
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณก้อง:</strong>
-          <span class="quote">
-            “เมื่อกี้ผมลองขับช้า ๆ แล้วลองเบรกครับ
-            ตอนแรกเบรกอยู่ แต่รู้สึกว่าต้องเหยียบลึกกว่าเดิม”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>พลอย:</strong>
-          <span class="quote">
-            “ตอนนี้พี่อยู่ที่ไหนคะ?”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>คุณก้อง:</strong>
-          <span class="quote">
-            “อยู่หน้าบ้านครับ กำลังจะออกไปส่งลูก”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>ช่าง:</strong>
-          <span class="quote">
-            “ถ้าเป็นแบบนี้ ผมไม่แนะนำให้ลูกค้าขับรถต่อครับ
-            ต้องหยุดใช้รถและตรวจระบบเบรกก่อน”
-          </span>
-        </div>
-
-        <div class="dialogue">
-          <strong>ผู้จัดการ:</strong>
-          <span class="quote">
-            “หยุดการนัดแบบปกติก่อนครับ
-            เรื่องนี้ต้องจัดการทันที”
-          </span>
-        </div>
-      `
-    }
-
-  };
-
-
-  /* =========================================================
-     NAVIGATION
-  ========================================================= */
-
-  let currentCase = null;
-
-
-  function openCase(caseNumber) {
-
-    currentCase = caseNumber;
-
-    const data = cases[caseNumber];
-
-    document.getElementById("landingPage").classList.add("hidden");
-    document.getElementById("casePage").classList.remove("hidden");
-
-    document.getElementById("caseNumber").textContent = caseNumber;
-
-    document.getElementById("caseTitle").textContent =
-      "CASE " + String(caseNumber).padStart(2, "0") +
-      " — " + data.title;
-
-    document.getElementById("layer1Content").innerHTML =
-      data.layer1;
-
-    document.getElementById("layer2Content").innerHTML =
-      data.layer2;
-
-    /* Reset Layer 2 */
-    document.getElementById("layer2Section")
-      .style.display = "none";
-
-    document.getElementById("passwordBox")
-      .style.display = "none";
-
-    document.getElementById("passwordInput").value = "";
-
-    document.getElementById("passwordError")
-      .style.display = "none";
+    document.getElementById("case" + number).classList.add("active");
 
     window.scrollTo({
       top: 0,
@@ -1357,16 +1810,20 @@
     });
   }
 
+
+  /* =====================================================
+     กลับหน้าแรก
+  ====================================================== */
 
   function goHome() {
 
-    document.getElementById("casePage")
-      .classList.add("hidden");
+    const pages = document.querySelectorAll(".case-page");
 
-    document.getElementById("landingPage")
-      .classList.remove("hidden");
+    pages.forEach(function(page) {
+      page.classList.remove("active");
+    });
 
-    currentCase = null;
+    document.getElementById("landing").style.display = "block";
 
     window.scrollTo({
       top: 0,
@@ -1375,58 +1832,70 @@
   }
 
 
-  /* =========================================================
+  /* =====================================================
      PASSWORD
-  ========================================================= */
+     
+     IMPORTANT:
+     เปลี่ยนรหัสผ่านตรงนี้ได้
+  ====================================================== */
 
-  function showPasswordBox() {
-
-    document.getElementById("passwordBox")
-      .style.display = "block";
-
-    document.getElementById("passwordInput")
-      .focus();
-  }
+  const ACTIVITY_PASSWORD = "1234";
 
 
-  function unlockLayer2() {
+  /* =====================================================
+     เปิด LAYER 2
+  ====================================================== */
 
-    const password =
-      document.getElementById("passwordInput").value;
+  function unlockCase(number) {
 
-    const error =
-      document.getElementById("passwordError");
+    const input = document.getElementById("password" + number);
+    const error = document.getElementById("error" + number);
+    const layer2 = document.getElementById("layer2-" + number);
 
-    if (password === "1234") {
+    if (input.value === ACTIVITY_PASSWORD) {
 
-      document.getElementById("layer2Section")
-        .style.display = "block";
+      layer2.classList.add("show");
 
       error.style.display = "none";
 
-      document.getElementById("layer2Section")
-        .scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
+      layer2.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
 
     } else {
 
       error.style.display = "block";
 
+      input.value = "";
+
+      input.focus();
     }
   }
 
 
-  /* กด Enter เพื่อเปิด Layer 2 ได้ */
-  document.getElementById("passwordInput")
-    .addEventListener("keydown", function(event) {
+  /* =====================================================
+     กด Enter เพื่อเปิดข้อมูล
+  ====================================================== */
 
-      if (event.key === "Enter") {
-        unlockLayer2();
+  document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Enter") {
+
+      const activeCase = document.querySelector(".case-page.active");
+
+      if (!activeCase) return;
+
+      const number = activeCase.id.replace("case", "");
+
+      const input = document.getElementById("password" + number);
+
+      if (document.activeElement === input) {
+        unlockCase(Number(number));
       }
+    }
 
-    });
+  });
 
 </script>
 
